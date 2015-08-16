@@ -12,10 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
-var browserslist = require('browserslist');
+//= require('browserslist');
 
+var browserslist;
 var process = function (css, opts) {
     var browsers = browserslist(opts.browsers, { path: opts.file });
     ['> 1%', 'last 2 version']

@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require normalize-rails
+ *= require_tree .
+ *= require_self
+ */
+
+@import "mixins";
+@import "variables";
+
+html, body {
+  @include fontsize(16);
+  font-family: $fontLato;
+  font-weight: 300;
+}
+
+.header {
+  background: $red-background;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  width: auto;
+
+  .logo {
+    position: relative;
+    top: 20px;
+    left: 120px;
+  }
+
+  .navigation {
+    display: inline-block;
+    float: right;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      right: 120px;
+
+      li {
+        display: inline-block;
+        text-transform: uppercase;
+        height: 100%;
+
+        a {
+          color: $textWhite;
+          background: $red-background;
+          display: inline-block;
+          vertical-align: middle;
+          padding: 64px 30px;
+          text-decoration: none;
+
+          &:hover, &:active, &:focus {
+            transition: background .2s ease-in;
+            transition: color .2s ease-in;
+            color: $red-background;
+            background: $textWhite;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main {
+  margin-top: 150px;
+}
