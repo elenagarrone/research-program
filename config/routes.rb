@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  scope "(:locale)", :locale => /en|de/ do
+  scope "(:locale)", :locale => /en|de|it/ do
     root :to => 'homepage#index'
     get "homepage/index"
   end
