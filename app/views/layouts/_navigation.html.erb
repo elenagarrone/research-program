@@ -1,0 +1,7 @@
+<p>
+  <%= link_to_unless I18n.locale == :en, "English", set_language_english_path %>
+  |
+  <%= link_to_unless I18n.locale == :de, "Deutsch", set_language_german_path %>
+  |
+  <%= link_to_unless I18n.locale == :it, "Italian", set_language_italian_path %>
+</p>
