@@ -1,0 +1,11 @@
+<div class="flags" tabindex="1">
+  <ul class="has-menu">
+    <li>
+      <img src="<%= asset_path @img_flag %>" />
+      <ul>
+        <li><%= link_to_unless I18n.locale == :it, "Italian", set_language_italian_path %></li>
+        <li><%= link_to_unless I18n.locale == :de, "German", set_language_german_path %></li>
+      </ul>
+    </li>
+  </ul>
+</div>

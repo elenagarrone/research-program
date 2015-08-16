@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require normalize-rails
+ *= require font-awesome
  *= require_tree .
  *= require_self
  */
@@ -70,7 +71,52 @@ html, body {
             background: $textWhite;
           }
         }
+
       }
+    }
+  }
+
+  .flags {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 5px;
+    border-radius: 3px;
+
+    &:before {
+      @include fontsize(18);
+      font-family: $fontAwesome;
+      content: '\f0d7';
+      display: inline-block;
+      color: $textWhite;
+      position: relative;
+      top: 2px;
+      padding-left: 2px;
+    }
+
+    &:hover, &:active, &:focus {
+      cursor: pointer;
+      transition: background .2s ease-in;
+      background: $flags-dropdown-background-hover;
+    }
+  }
+
+  .has-menu {
+    list-style: none;
+
+    li {
+      ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+
+        &.is-active {
+          display: block;
+        }
+      }
+
     }
   }
 }
