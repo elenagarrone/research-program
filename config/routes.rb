@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
+  get 'set_language/english'
+
+  get 'set_language/german'
+
+  get 'set_language/italian'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  scope "(:locale)", :locale => /en|de|it/ do
-    root :to => 'homepage#index'
-    get "homepage/index"
-  end
+  get "homepage/index"
+  root :to => 'homepage#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

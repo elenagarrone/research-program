@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+var browserslist = require('browserslist');
+
+var process = function (css, opts) {
+    var browsers = browserslist(opts.browsers, { path: opts.file });
+    ['> 1%', 'last 2 version']
+}
