@@ -1,11 +1,13 @@
-<div class="flags" tabindex="1">
-  <ul class="has-menu">
-    <li>
-      <img src="<%= asset_path @img_flag %>" />
-      <ul>
-        <li><%= link_to_unless I18n.locale == :it, "Italian", set_language_italian_path %></li>
-        <li><%= link_to_unless I18n.locale == :de, "German", set_language_german_path %></li>
-      </ul>
-    </li>
+<div class="flags dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <img src="<%= asset_path @img_flag %>" />
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <% @languages.each do |code, name|%>
+      <%if code.to_s != @nationality.to_s %>
+        <li><%= link_to name, 'set_language/' + name.downcase %></li>
+      <% end %>
+    <% end %>
   </ul>
 </div>

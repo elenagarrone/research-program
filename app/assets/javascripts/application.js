@@ -22,9 +22,3 @@ var process = function (css, opts) {
     var browsers = browserslist(opts.browsers, { path: opts.file });
     ['> 1%', 'last 2 version']
 }
-
-$(function() {
-  $('.has-menu').hover(function() {
-    $('.has-menu li ul').toggleClass('is-active');
-  });
-});
