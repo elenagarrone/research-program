@@ -30,7 +30,7 @@ html, body {
 }
 
 .header {
-  background: $red-background;
+  background: $backgroundRed;
   position: fixed;
   top: 0;
   left: 0;
@@ -64,7 +64,7 @@ html, body {
 
         a {
           color: $textWhite;
-          background: $red-background;
+          background: $backgroundRed;
           display: inline-block;
           vertical-align: middle;
           padding: 64px 30px;
@@ -73,7 +73,7 @@ html, body {
           &:hover, &:active, &:focus {
             transition: background .2s ease-in;
             transition: color .2s ease-in;
-            color: $red-background;
+            color: $backgroundRed;
             background: $textWhite;
           }
         }
