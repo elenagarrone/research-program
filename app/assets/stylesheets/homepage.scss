@@ -1,3 +1,122 @@
 // Place all the styles related to the homepage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "mixins";
+@import "variables";
+
+.row {
+  margin-bottom: 15px;
+}
+
+section {
+  padding: 150px 0;
+
+  h1 {
+    @include fontsize(40);
+    line-height: 1.4;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color: #515151;
+    margin-bottom: 33px;
+  }
+
+  h3 {
+    @include fontsize(18);
+    font-family: $fontItalic;
+    font-style: italic;
+    color: $textRed;
+    margin-top: 40px;
+  }
+
+  p {
+    @include fontsize(18);
+    line-height: 1.8;
+  }
+}
+
+.intro {
+  background: $backgroundWhite;
+}
+
+.about, .team {
+  background: $backgroundGrey;
+}
+
+.team {
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .team-item {
+    margin: 0 0 15px;
+    right: 0;
+
+    .team-link {
+      display: block;
+      position: relative;
+      max-width: 400px;
+      margin: 0 auto;
+
+      .team-hover {
+        background: $hoverRed;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all ease .5s;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        .team-hover-content {
+          position: absolute;
+          width: 100%;
+          height: 20px;
+          font-size: 20px;
+          text-align: center;
+          top: 50%;
+          margin-top: -12px;
+          color: $textWhite;
+
+          i {
+            margin-top: -12px;
+          }
+
+          h3, h4 {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .team-caption {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: $backgroundWhite;
+      text-align: center;
+      padding: 25px;
+
+      h4 {
+        text-transform: none;
+        margin: 0;
+      }
+
+      p {
+        font-family: $fontItalic;
+        font-style: italic;
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+  }
+}

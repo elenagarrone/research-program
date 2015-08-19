@@ -21,8 +21,12 @@
 
 html, body {
   @include fontsize(16);
-  font-family: $fontLato;
+  font-family: $fontRoboto;
   font-weight: 300;
+
+  h1, h2 {
+    font-weight: 700;
+  }
 }
 
 .header {
@@ -33,11 +37,13 @@ html, body {
   right: 0;
   height: 150px;
   width: auto;
+  z-index: 100;
 
   .logo {
     position: relative;
-    top: 20px;
+    top: 0;
     left: 120px;
+    width: 150px;
   }
 
   .navigation {
@@ -87,9 +93,22 @@ html, body {
         left: -86px;
       }
     }
+
+    .btn {
+      padding: 0px 5px;
+
+      &.btn-default {
+        border: 0;
+
+        &:hover {
+          background: $backgroundGrey;
+        }
+      }
+    }
   }
 }
 
 .main {
   margin-top: 150px;
+  text-align: center;
 }
