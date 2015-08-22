@@ -40,6 +40,10 @@ html, body {
     background: $red;
     color: $textWhite;
   }
+
+  .hidden {
+    display: none;
+  }
 }
 
 .header {

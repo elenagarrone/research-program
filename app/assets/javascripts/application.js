@@ -36,7 +36,3 @@ $(function() {
     });
 });
 
-// Highlight the top nav as scrolling occurs
-$('body').scrollspy({
-    target: '.nav-fixed-top'
-})
