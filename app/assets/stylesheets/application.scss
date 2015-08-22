@@ -44,6 +44,10 @@ html, body {
   .hidden {
     display: none;
   }
+
+  .flex-row {
+    display: flex;
+  }
 }
 
 .header {
@@ -104,8 +108,8 @@ html, body {
           &:hover, &:active, &:focus {
             transition: background .2s ease-in;
             transition: color .2s ease-in;
-            color: $backgroundRed;
-            background: $textWhite;
+            color: $textWhite;
+            background: $backgroundRed;
           }
         }
 
@@ -142,4 +146,38 @@ html, body {
 .main {
   margin-top: 150px;
   text-align: center;
+}
+
+.footer {
+  @include fontsize(12);
+  background: $backgroundDarkGrey;
+
+  .col1, .col2 {
+    padding-top: 25px;
+    padding-bottom: 25px;  
+  }
+
+  .col1 {
+    column-count: 2;
+
+    li {
+      a {
+        color: $textWhite;
+        padding: 4px 15px;
+
+        &:hover, &:focus, &:active {
+          transition: color .2s ease-in;
+          color: $textRed;
+          text-decoration: underline;
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  .created-by {
+    p {
+      color: $textWhite;
+    }
+  }
 }

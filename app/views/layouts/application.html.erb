@@ -6,11 +6,13 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body data-spy="scroll" data-offset="165" data-target="#side-nav">
+<body data-spy="scroll" data-offset="165" data-target="#side-nav" data-target="#footer">
   <%= render :partial => 'layouts/header' %>
 
   <div class="main">
     <%= yield %>
   </div>
+
+  <%= render :partial => 'layouts/footer/footer' %>
 </body>
 </html>
