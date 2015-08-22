@@ -109,6 +109,8 @@
 
     ul {
       right:0;
+      position: absolute;
+      width: 50%;
 
       @include breakpoint(sm) {
         right: 10%;
@@ -116,6 +118,7 @@
         margin: 0;
         padding: 0;
         position: relative;
+        width: initial;
       }
 
       li {
