@@ -9,7 +9,11 @@
       text-align: left;
 
       input[type="email"] {
-        width: 40%;
+        width: 100%;
+        
+        @include breakpoint(sm) {
+          width: 40%;
+        }
       }
     }
   }
