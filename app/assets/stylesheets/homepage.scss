@@ -9,7 +9,7 @@
   margin-bottom: 15px;
 }
 
-a, input, textarea {
+a, input, textarea, button {
   &:focus {
     outline:none;
   }
@@ -22,7 +22,11 @@ h2 {
 }
 
 section {
-  padding: 100px 0;
+  padding: 90px 0;
+
+  @include breakpoint(md) {
+    padding: 100px 0;
+  }
 
   h1 {
     @include fontsize(32);
@@ -48,7 +52,11 @@ section {
 }
 
 #intro {
-  padding: 150px 0;
+  padding: 100px 0;
+
+  @include breakpoint(md) {
+    padding: 150px 0;
+  }
 }
 
 #intro, #ethics {
