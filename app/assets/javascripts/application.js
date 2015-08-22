@@ -23,3 +23,20 @@ var process = function (css, opts) {
     var browsers = browserslist(opts.browsers, { path: opts.file });
     ['> 1%', 'last 2 version']
 }
+
+// jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        var scrollNumber = $($anchor.attr('href')).offset().top - 150;
+        $('html, body').stop().animate({
+            scrollTop: scrollNumber
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
+
+// Highlight the top nav as scrolling occurs
+$('body').scrollspy({
+    target: '.nav-fixed-top'
+})

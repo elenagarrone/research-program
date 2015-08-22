@@ -16,7 +16,7 @@ a, input {
 }
 
 section {
-  padding: 150px 0;
+  padding: 100px 0;
 
   h1 {
     @include fontsize(40);
@@ -43,15 +43,19 @@ section {
   }
 }
 
-.intro, .ethics {
+#intro {
+  padding: 150px 0;
+}
+
+#intro, #ethics {
   background: $backgroundWhite;
 }
 
-.about, .team, .apply {
+#about, #team, #apply {
   background: $backgroundGrey;
 }
 
-.team {
+#team {
 
   h2 {
     margin-bottom: 20px;
@@ -134,7 +138,7 @@ section {
   }
 }
 
-.apply {
+#apply {
 
   h2 {
     margin-bottom: 20px;

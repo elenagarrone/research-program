@@ -75,6 +75,15 @@ html, body {
         text-transform: uppercase;
         height: 100%;
 
+        &.active {
+          a {
+            transition: background .2s ease-in;
+            transition: color .2s ease-in;
+            color: $backgroundRed;
+            background: $textWhite;
+          }
+        }
+
         a {
           color: $textWhite;
           background: $backgroundRed;
