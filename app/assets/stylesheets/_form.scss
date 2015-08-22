@@ -1,0 +1,48 @@
+@import "mixins";
+@import "variables";
+
+form {
+  label {
+    display: initial;
+  }
+
+  input, textarea {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  input {
+    height: 35px;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  input[type='email'], input[type='text'], textarea {
+    border: 1px solid $white;
+    color: #C0C0C0;
+    padding: 5px;
+    font-weight: 100;
+    resize: none;
+
+    &:hover, &:active, &:focus {
+      transition: border .2s ease-in;
+      border: 1px solid $red;
+    }
+  }
+
+  input[type='submit'] {
+    border: 1px solid $red;
+    background: $backgroundRed;
+    color: $white;
+    text-transform: uppercase;
+
+    &:hover, &:active, &:focus {
+      transition: border .2s ease-in;
+      transition: background .2s ease-in;
+      background: $backgroundDarkGrey;
+      border: 1px solid $grey;
+    }
+  }
+}

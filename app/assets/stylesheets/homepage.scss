@@ -9,10 +9,16 @@
   margin-bottom: 15px;
 }
 
-a, input {
+a, input, textarea {
   &:focus {
     outline:none;
   }
+}
+
+h2 {
+  text-transform: uppercase;
+  color: #515151;
+  margin-bottom: 33px;
 }
 
 section {
@@ -21,12 +27,6 @@ section {
   h1 {
     @include fontsize(40);
     line-height: 1.4;
-  }
-
-  h2 {
-    text-transform: uppercase;
-    color: #515151;
-    margin-bottom: 33px;
   }
 
   h3 {
@@ -55,182 +55,7 @@ section {
   background: $backgroundGrey;
 }
 
-#team {
-
-  h2 {
-    margin-bottom: 20px;
-  }
-
-  h3 {
-    margin-top: 5px;
-    margin-bottom: 20px;
-  }
-
-  a {
-    &:focus {
-      outline: 2px solid $red;
-      outline-offset: -2px;
-    }
-  }
-
-  .team-item {
-    margin: 0 0 15px;
-    right: 0;
-
-    .team-link {
-      display: block;
-      position: relative;
-      max-width: 400px;
-      margin: 0 auto;
-
-      .team-hover {
-        background: $hoverRed;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: all ease .5s;
-
-        &:hover {
-          opacity: 1;
-        }
-
-        .team-hover-content {
-          position: absolute;
-          width: 100%;
-          height: 20px;
-          font-size: 20px;
-          text-align: center;
-          top: 50%;
-          margin-top: -12px;
-          color: $textWhite;
-
-          i {
-            margin-top: -12px;
-          }
-
-          h3, h4 {
-            margin: 0;
-          }
-        }
-      }
-    }
-
-    .team-caption {
-      max-width: 400px;
-      margin: 0 auto;
-      background-color: $backgroundWhite;
-      text-align: center;
-      padding: 25px;
-
-      h4 {
-        text-transform: none;
-        margin: 0;
-      }
-
-      p {
-        font-family: $fontItalic;
-        font-style: italic;
-        font-size: 16px;
-        margin: 0;
-      }
-    }
-  }
-
-  .team-modal {
-    .modal-content {
-      border-radius: 0;
-      background-clip: border-box;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      border: 0;
-      min-height: 100%;
-      padding: 100px 0;
-      text-align: center;
-
-      h2 {
-        margin-bottom: 15px;
-        font-size: 3em;
-      }
-
-      p {
-        margin-bottom: 30px;
-
-        &.item-intro {
-          margin: 20px 0 30px;
-          font-family: $fontItalic;
-          font-style: italic;
-        }
-      }
-
-      .list-inline {
-        margin-bottom: 30px;
-        margin-top: 0;
-      }
-
-      img {
-        margin-bottom: 30px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .btn {
-        border-radius: 0;
-        text-transform: uppercase;
-
-        &:hover, &:focus, &:active {
-          transition: color .2s ease-in;
-          transition: background .2s ease-in;
-          background: $backgroundRed;
-          color: $textWhite;
-        }
-      }
-    }
-
-    .close-modal {
-      position: absolute;
-      width: 75px;
-      height: 75px;
-      background-color: transparent;
-      top: 25px;
-      right: 25px;
-      cursor: pointer;
-
-      &:hover {
-        opacity: .3
-      }
-
-      .lr {
-        height: 75px;
-        width: 1px;
-        margin-left: 35px;
-        background-color: #222;
-        transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        z-index: 1051;
-
-        .rl {
-          height: 75px;
-          width: 1px;
-          background-color: #222;
-          transform: rotate(90deg);
-          -ms-transform: rotate(90deg);
-          -webkit-transform: rotate(90deg);
-          z-index: 1052;
-        }
-      }      
-    }
-
-    .modal-backdrop {
-      opacity: 0;
-      display: none;
-    }
-  }
-}
-
 #apply {
-
   h2 {
     margin-bottom: 20px;
   }
@@ -238,43 +63,5 @@ section {
   h3 {
     margin-top: 5px;
     margin-bottom: 50px;
-  }
-
-  form {
-    label {
-      display: initial;
-    }
-
-    input {
-      margin-bottom: 20px;
-      width: 100%;
-      height: 35px;
-    }
-
-    input[type='email'], input[type='text'] {
-      border: 1px solid $white;
-      color: #C0C0C0;
-      padding: 5px;
-      font-weight: 100;
-
-      &:hover, &:active, &:focus {
-        transition: border .2s ease-in;
-        border: 1px solid $red;
-      }
-    }
-
-    input[type='submit'] {
-      border: 1px solid $red;
-      background: $backgroundRed;
-      color: $white;
-      text-transform: uppercase;
-
-      &:hover, &:active, &:focus {
-        transition: border .2s ease-in;
-        transition: background .2s ease-in;
-        background: $backgroundDarkGrey;
-        border: 1px solid $grey;
-      }
-    }
   }
 }
