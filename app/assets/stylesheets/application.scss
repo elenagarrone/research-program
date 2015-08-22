@@ -94,7 +94,8 @@ html, body {
     position: absolute;
     right: 35px;
     top: 25px;
-    width: 50px;
+    width: 40px;
+    height: 42px;
 
     @include breakpoint(sm) {
       right: 15px;
@@ -143,20 +144,36 @@ html, body {
   }
 
   .navigation {
-    display: inline-block;
-    float: right;
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+
+    @include breakpoint(sm) {
+      display: inline-block;
+      float: right;
+    }
 
     ul {
-      right: 10%;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      position: relative;
+      right:0;
+
+      @include breakpoint(sm) {
+        right: 10%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
 
       li {
-        display: inline-block;
+        display: block;
         text-transform: uppercase;
         height: 100%;
+
+        @include breakpoint(sm) {
+          display: inline-block;
+        }
 
         &.active {
           a {
@@ -171,14 +188,19 @@ html, body {
           @include fontsize(14);
           color: $textWhite;
           background: $backgroundRed;
-          display: inline-block;
+          display: block;
+          border-top: 1px solid $white;
           vertical-align: middle;
-          padding: 64px 15px;
           text-decoration: none;
+
+          @include breakpoint(sm) {
+            display: inline-block;
+            padding: 64px 15px;
+            border: 0;
+          }
 
           @include breakpoint(md) {
             @include fontsize(16);
-            padding: 64px 15px;
           }
 
           @include breakpoint(lg) {
@@ -188,8 +210,13 @@ html, body {
           &:hover, &:active, &:focus {
             transition: background .2s ease-in;
             transition: color .2s ease-in;
-            color: $textRed;
-            background: $backgroundWhite;
+            color: $textWhite;
+            background: $backgroundDarkGrey;
+
+            @include breakpoint(sm) {
+              color: $textRed;
+              background: $backgroundWhite;
+            }
           }
         }
 
@@ -198,11 +225,17 @@ html, body {
   }
 
   .flags {
+      display: inline-block;
+      position: absolute;
+      top: 90px;
+      left: 0;
 
     @include breakpoint(sm) {
+      display: block;
       position: absolute;
       right: 0;
       top: 0;
+      left: initial;
     }
 
     &.open { 
@@ -210,7 +243,7 @@ html, body {
         left: 0;
 
         @include breakpoint(sm) {
-         left: -86px;
+         left: -107px;
         }
       }
     }
