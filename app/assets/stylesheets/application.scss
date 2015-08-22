@@ -56,9 +56,13 @@ html, body {
   top: 0;
   left: 0;
   right: 0;
-  height: 150px;
+  height: 90px;
   width: auto;
   z-index: 100;
+
+  @include breakpoint(sm) {
+    height: 150px;
+  }
 
   ::selection {
     background: $backgroundGrey;
@@ -67,16 +71,20 @@ html, body {
 
   .logo {
     position: relative;
-    top: 75px;
-    left: 10%;
+    top: 0;
+    left: 5%;
     width: 90px;
-    transform: translate(-50%, -50%);
+
+    @include breakpoint(sm) {
+      top: 75px;
+      left: 10%;
+      width: 90px;
+      transform: translate(-50%, -50%);
+    }
 
     @include breakpoint(md) {
-      top: 0;
-      left: 120px;
       width: 150px;
-      transform: none;
+      transform: 0;
     }
     
   }
@@ -84,9 +92,14 @@ html, body {
   .menu {
     cursor: pointer;
     position: absolute;
-    right: 15px;
-    top: 60px;
+    right: 35px;
+    top: 25px;
     width: 50px;
+
+    @include breakpoint(sm) {
+      right: 15px;
+      top: 60px;
+    }
 
     .menu-global {
       backface-visibility: hidden;
@@ -128,12 +141,13 @@ html, body {
       }
     }
   }
+
   .navigation {
     display: inline-block;
     float: right;
 
     ul {
-      right: 5%;
+      right: 10%;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -184,13 +198,20 @@ html, body {
   }
 
   .flags {
-    position: absolute;
-    right: 0;
-    top: 0;
+
+    @include breakpoint(sm) {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
 
     &.open { 
       > .dropdown-menu {
-        left: -86px;
+        left: 0;
+
+        @include breakpoint(sm) {
+         left: -86px;
+        }
       }
     }
 
@@ -210,8 +231,12 @@ html, body {
 }
 
 .main {
-  margin-top: 150px;
+  margin-top: 90px;
   text-align: center;
+
+  @include breakpoint(sm) {
+    margin-top: 150px;
+  }
 }
 
 .footer {
