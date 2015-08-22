@@ -2,7 +2,15 @@
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        var headerHeight = $('.header').outerHeight();
+        var headerHeight;
+        var headerPosition = $('.header').css('position');
+
+        if (headerPosition == 'absolute') {
+          var headerHeight = 0;
+        } else {
+          var headerHeight = $('.header').outerHeight();
+        }
+        
         var scrollNumber = $($anchor.attr('href')).offset().top - headerHeight;
         $('html, body').stop().animate({
             scrollTop: scrollNumber

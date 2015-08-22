@@ -25,8 +25,12 @@ section {
   padding: 100px 0;
 
   h1 {
-    @include fontsize(40);
+    @include fontsize(32);
     line-height: 1.4;
+
+    @include breakpoint(sm) {
+      @include fontsize(40);
+    }
   }
 
   h3 {
