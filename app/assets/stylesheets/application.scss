@@ -56,6 +56,11 @@ html, body {
   width: auto;
   z-index: 100;
 
+  ::selection {
+    background: $backgroundGrey;
+    color: $textWhite;
+  }
+
   .logo {
     position: relative;
     top: 0;
@@ -83,8 +88,8 @@ html, body {
           a {
             transition: background .2s ease-in;
             transition: color .2s ease-in;
-            color: $backgroundRed;
-            background: $textWhite;
+            color: $textWhite;
+            text-decoration: underline;
           }
         }
 
