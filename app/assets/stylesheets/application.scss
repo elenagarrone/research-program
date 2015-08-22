@@ -27,6 +27,19 @@ html, body {
   h1, h2 {
     font-weight: 700;
   }
+
+  a {
+    color: $textRed;
+
+    &:hover, &:focus, &:active {
+      color: $textRed;
+    }
+  }
+
+  ::selection {
+    background: $red;
+    color: $textWhite;
+  }
 }
 
 .header {

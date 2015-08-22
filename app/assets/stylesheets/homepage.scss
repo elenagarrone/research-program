@@ -145,35 +145,41 @@ section {
     margin-bottom: 50px;
   }
 
-  input {
-    margin-bottom: 20px;
-    width: 28%;
-    height: 35px;
-  }
-
-  input[type='email'], input[type='text'] {
-    border: 1px solid $white;
-    color: #C0C0C0;
-    padding: 5px;
-    font-weight: 100;
-
-    &:hover, &:active, &:focus {
-      transition: border .2s ease-in;
-      border: 1px solid $red;
+  form {
+    label {
+      display: initial;
     }
-  }
 
-  input[type='submit'] {
-    border: 1px solid $red;
-    background: $backgroundRed;
-    color: $white;
-    text-transform: uppercase;
+    input {
+      margin-bottom: 20px;
+      width: 100%;
+      height: 35px;
+    }
 
-    &:hover, &:active, &:focus {
-      transition: border .2s ease-in;
-      transition: background .2s ease-in;
-      background: $backgroundDarkGrey;
-      border: 1px solid $grey;
+    input[type='email'], input[type='text'] {
+      border: 1px solid $white;
+      color: #C0C0C0;
+      padding: 5px;
+      font-weight: 100;
+
+      &:hover, &:active, &:focus {
+        transition: border .2s ease-in;
+        border: 1px solid $red;
+      }
+    }
+
+    input[type='submit'] {
+      border: 1px solid $red;
+      background: $backgroundRed;
+      color: $white;
+      text-transform: uppercase;
+
+      &:hover, &:active, &:focus {
+        transition: border .2s ease-in;
+        transition: background .2s ease-in;
+        background: $backgroundDarkGrey;
+        border: 1px solid $grey;
+      }
     }
   }
 }
