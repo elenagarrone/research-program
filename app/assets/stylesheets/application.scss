@@ -67,21 +67,77 @@ html, body {
 
   .logo {
     position: relative;
-    top: 0;
-    left: 120px;
-    width: 150px;
+    top: 75px;
+    left: 10%;
+    width: 90px;
+    transform: translate(-50%, -50%);
+
+    @include breakpoint(md) {
+      top: 0;
+      left: 120px;
+      width: 150px;
+      transform: none;
+    }
+    
   }
 
+  .menu {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 60px;
+    width: 50px;
+
+    .menu-global {
+      backface-visibility: hidden;
+      position: absolute;
+      left: 0;
+      border-top: 7px solid $white;
+      border-radius: 5px;
+      width: 100%;
+      transition: 0.55s;
+    
+      &.menu-top {
+        top: 0;
+      }
+
+      &.menu-middle {
+        top: 18px;
+      }
+
+      &.menu-bottom {
+        top: 36px;
+      }
+
+      &.menu-top-click {
+        backface-visibility: hidden;
+        top: 15px;
+        transform: rotate(50deg);
+        transition: 0.55s 0.5s;
+      }
+
+      &.menu-middle-click {
+        opacity: 0;
+      }
+
+      &.menu-bottom-click {
+        backface-visibility: hidden;
+        top: 15px;
+        transform: rotate(-410deg);
+        transition: 0.55s 0.5s;
+      }
+    }
+  }
   .navigation {
     display: inline-block;
     float: right;
 
     ul {
+      right: 5%;
       list-style: none;
       margin: 0;
       padding: 0;
       position: relative;
-      right: 120px;
 
       li {
         display: inline-block;
@@ -98,18 +154,28 @@ html, body {
         }
 
         a {
+          @include fontsize(14);
           color: $textWhite;
           background: $backgroundRed;
           display: inline-block;
           vertical-align: middle;
-          padding: 64px 30px;
+          padding: 64px 15px;
           text-decoration: none;
+
+          @include breakpoint(md) {
+            @include fontsize(16);
+            padding: 64px 15px;
+          }
+
+          @include breakpoint(lg) {
+            padding: 64px 30px;
+          }
 
           &:hover, &:active, &:focus {
             transition: background .2s ease-in;
             transition: color .2s ease-in;
-            color: $textWhite;
-            background: $backgroundRed;
+            color: $textRed;
+            background: $backgroundWhite;
           }
         }
 

@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require jquery.easing
 //= require twitter/bootstrap
+//= require pageScrolling
+//= require burgerMenu
 //= require turbolinks
 //= require_tree .
 //= require('browserslist');
@@ -23,16 +25,4 @@ var process = function (css, opts) {
     var browsers = browserslist(opts.browsers, { path: opts.file });
     ['> 1%', 'last 2 version']
 }
-
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        var scrollNumber = $($anchor.attr('href')).offset().top - 150;
-        $('html, body').stop().animate({
-            scrollTop: scrollNumber
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});
 
