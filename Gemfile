@@ -28,6 +28,11 @@ gem "autoprefixer-rails"
 gem 'normalize-rails'
 gem "font-awesome-rails"
 gem 'jquery-easing-rails'
+gem 'mail_form'
+gem 'simple_form'
+gem 'mail'
+gem 'rails_refactor'
+gem 'figaro'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

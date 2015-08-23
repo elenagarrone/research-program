@@ -11,7 +11,8 @@
   <%= render :partial => 'layouts/header' %>
 
   <div class="main">
-    <%= yield %>
+    <%= render template: 'homepage/index' %>
+    <%= render template:'contacts/new' %>
   </div>
 
   <%= render :partial => 'layouts/footer/footer' %>
