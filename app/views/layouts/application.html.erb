@@ -11,6 +11,11 @@
   <%= render :partial => 'layouts/header' %>
 
   <div class="main">
+    <% if notice %>
+      <div class="alert">
+        <%= notice %>
+      </div>
+    <% end %>
     <%= render template: 'homepage/index' %>
     <%= render template:'contacts/new' %>
   </div>
