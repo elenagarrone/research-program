@@ -1,25 +1,7 @@
 @import "mixins";
 @import "variables";
-
-.contact-modal {
-  .modal-content {
-    background: $backgroundGrey;
-
-    form {
-      text-align: left;
-
-      input[type="email"] {
-        width: 100%;
-
-        @include breakpoint(sm) {
-          width: 40%;
-        }
-      }
-    }
-  }
-}
   
-.team-modal, .contact-modal {
+.team-modal {
   .modal-content {
     border-radius: 0;
     background-clip: border-box;

@@ -3,7 +3,7 @@
 
 form {
   label {
-    display: initial;
+    display: none;
   }
 
   input, textarea {
@@ -19,9 +19,27 @@ form {
     height: 200px;
   }
 
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: $textGrey;
+  }
+
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: $textGrey;
+    opacity: 1;
+  }
+
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: $textGrey;
+    opacity: 1;
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $textGrey;
+  }
+
   input[type='email'], input[type='text'], textarea {
     border: 1px solid $white;
-    color: #C0C0C0;
+    color: $textBlack;
     padding: 5px;
     font-weight: 100;
     resize: none;
@@ -43,6 +61,43 @@ form {
       transition: background .2s ease-in;
       background: $backgroundDarkGrey;
       border: 1px solid $grey;
+    }
+  }
+}
+
+#contact {
+  form {
+    .contact_email {
+      text-align: left;
+
+      input[type='email'] {
+        width: 100%; 
+
+        @include breakpoint(md) {
+          width: 40%;
+        }
+      }
+    }
+
+    input[type='email'], input[type='text'], textarea {
+      border: 1px solid $textGrey;
+
+      &:hover, &:active, &:focus {
+        transition: border .2s ease-in;
+        border: 1px solid $red;
+      }
+    }
+
+    input[type='submit'] {
+      &:hover, &:active, &:focus {
+        color: $textWhite;
+      }
+    }
+
+    .btn {
+      @include fontsize(16);
+      border-radius: 0;
+      font-family: $fontRoboto;
     }
   }
 }
